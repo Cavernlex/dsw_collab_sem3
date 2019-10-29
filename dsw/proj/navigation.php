@@ -61,8 +61,13 @@ if(isset($_SESSION['user_name']))
 	 echo"<a id ='logout' href='logout.php'>logout</a>";
 	
 else
-	echo"<a id='login' href = 'login.htm'>login</a>";
-	
+	{
+		echo"<a id='login' href = 'login.htm'>login</a>";
+		
+		// add a link to sign up page
+		echo"<a id='signup' href=''> sign up</a>";
+	}
+
 
 ?>
 
