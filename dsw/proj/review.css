@@ -1,0 +1,71 @@
+.pp {
+	 float:left;
+	 border-radius: 5px;
+	 object-fit:cover;
+	 width:100px;
+	 height: 100px;
+ }
+ 
+ .critic_reviews {
+	 float:right;
+	 width:600px;
+	 height:200px;
+    color: #454140;
+	font-style: normal;
+	text-align:center;
+    font-size: 23px;
+    font-family: "TeX Gyre Adventor";
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  background-color:rgb(255, 255, 179);
+  border-radius: 5px;
+  padding: 4px 16px;
+}
+
+ .user_reviews {
+	 float:left;
+	 width:600px;
+	 height:200px;
+    color:#454140;
+	font-style: normal;
+	text-align:center;
+    font-size: 23px;
+    font-family: "TeX Gyre Adventor";
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  background-color:rgb(179, 217, 255);
+  border-radius: 5px;
+  padding: 4px 16px;
+}
+
+ .critic_container {
+	 float:right;
+	 width:630px;
+	 height:340px;
+    color: rgb(242, 242, 242);
+	font-style: normal;
+	text-align:left;
+    font-size: 22px;
+    font-family: "TeX Gyre Adventor";
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  background-color:#454140;
+  border-radius: 5px;
+  padding: 4px 16px;
+}
+
+.user_container {
+	 float:left;
+	 width:630px;
+	 height:340px;
+    color: rgb(242, 242, 242);
+	font-style: normal;
+	text-align:left;
+    font-size: 22px;
+    font-family: "TeX Gyre Adventor";
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  background-color:#454140;
+  border-radius: 5px;
+  padding: 4px 16px;
+}

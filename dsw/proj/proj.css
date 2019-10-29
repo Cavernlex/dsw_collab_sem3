@@ -1,0 +1,71 @@
+
+
+
+.top_rated td{
+	padding: 30px;
+    }
+
+ 
+.top_rated tr{
+     
+     width: 12.5%;
+	 
+ }
+ 
+.top_rated th{
+     
+     width: 12.5%;
+	 padding:30px;
+	 
+ }
+ .top_rated img{
+     border-radius: 5px;
+     height: 150px;
+     width: 150px;
+ 
+ }
+
+
+
+.links a {
+
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+ .links {
+	float: right;
+	width: 250px;
+    color: rgb(242, 242, 242);
+	font-style: normal;
+    font-size: 20px;
+    font-family: "TeX Gyre Adventor";
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color:#454140;
+    border-radius: 5px;
+}
+
+.links:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.links {
+  padding: 30px 30px;
+}
+
+#caption {
+	border-radius: 10px 10px 0px 0px;
+	 background-color: #333;
+	 padding:10px;
+    color: rgb(242, 242, 242);
+    font-style: normal;
+    font-size: 20px;
+    font-family: "TeX Gyre Adventor";
+
+ }
+
+

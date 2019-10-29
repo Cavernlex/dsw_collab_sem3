@@ -1,0 +1,57 @@
+.top_nav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+
+.top_nav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.top_nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.top_nav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.top_nav input[type=text] {
+  position:absolute;
+  left:50%;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  border-radius:5px;
+}
+
+.top_nav input[type=button] {
+ 
+ float:right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  border-radius:5px;
+}
+
+.top_rated table{
+    border-radius: 0px 0px 10px 10px;
+    background-image: linear-gradient(to bottom right,rgb(38, 38, 38),rgb(77, 77, 77),rgb(102, 102, 102),rgb(255, 153, 153));
+    color: rgb(242, 242, 242);
+    font-style: normal;
+    font-size: 20px;
+    font-family: "TeX Gyre Adventor";
+    width: 75%;
+ }

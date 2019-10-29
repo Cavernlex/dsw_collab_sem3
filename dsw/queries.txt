@@ -1,0 +1,81 @@
+CREATE TABLE track(
+track_id INT,
+feat_artist_id INT,
+album_id INT,
+name VARCHAR(40) NOT NULL
+);
+
+ALTER TABLE track ADD PRIMARY KEY(track_id);
+
+CREATE TABLE album(
+album_id INT,
+artist_id INT NOT NULL,
+name VARCHAR(40) NOT NULL, 
+label VARCHAR(40),
+genre VARCHAR(30),
+art_link VARCHAR(400),
+release_date DATE
+);
+
+ALTER TABLE album ADD PRIMARY KEY(album_id);
+
+ALTER TABLE track
+ADD FOREIGN KEY (album_id) REFERENCES album(album_id);
+
+CREATE TABLE artist(
+artist_id INT,
+name VARCHAR(40),
+description VARCHAR(250)
+);
+
+ALTER TABLE artist ADD PRIMARY KEY(artist_id);
+
+ALTER TABLE album
+ADD FOREIGN KEY (artist_id) REFERENCES artist(artist_id);
+
+CREATE TABLE users(
+user_id INT,
+name VARCHAR(90) NOT NULL,
+email VARCHAR(100) NOT NULL UNIQUE,
+pass_word VARCHAR(100) NOT NULL,
+user_type VARCHAR(20) NOT NULL,
+country VARCHAR(30) NOT NULL,
+gender VARCHAR(10) NOT NULL,
+mobile_no INT UNIQUE
+);
+
+ALTER TABLE users ADD PRIMARY KEY(user_id);
+
+CREATE TABLE rating(
+album_id INT NOT NULL, 
+user_id INT NOT NULL,
+score INT NOT NULL,
+review VARCHAR(400)
+);
+
+ALTER TABLE rating ADD CONSTRAINT pk_rating PRIMARY KEY(album_id,user_id);
+
+ALTER TABLE rating
+ADD FOREIGN KEY (album_id) REFERENCES album(album_id);
+
+ALTER TABLE rating
+ADD FOREIGN KEY (user_id) REFERENCES users(user_id);
+
+
+*************************
+
+SELECT album.name,artist.name,album.genre,cs,gs 
+FROM album 
+INNER JOIN artist 
+ON album.artist_id=artist.artist_id
+INNER JOIN (SELECT album_id,AVG(score) as cs FROM users,rating WHERE users.user_id=rating.user_id AND user_type="critic" GROUP BY album_id) critic 
+ON album.album_id=critic.album_id
+INNER JOIN (SELECT album-id,AVG(score) as gs FROM users,rating WHERE users.user_id=rating.user_id AND user_type="gen" GROUP BY album_id) gen
+ON album.album_id=gen.album_id;
+
+
+
+SELECT users.user_name,rating.score,rating.review,users.profile_pic FROM critic_users,album INNER JOIN rating ON album.album_id=rating.album_id INNER JOIN users ON rating.user_id=users.user_id WHERE critic_users.user_id<>rating.user_id;
+
+(SELECT critic_users.publication,users.user_name,rating.score,rating.review,users.profile_pic FROM critic_users,album INNER JOIN rating ON album.album_id=rating.album_id INNER JOIN users ON rating.user_id=users.user_id WHERE users.user_id=critic_users.user_id);
+
