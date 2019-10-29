@@ -1,12 +1,3 @@
-CREATE TABLE track(
-track_id INT,
-feat_artist_id INT,
-album_id INT,
-track_name VARCHAR(40) NOT NULL
-);
-
-ALTER TABLE track ADD PRIMARY KEY(track_id);
-
 CREATE TABLE album(
 album_id INT,
 artist_id INT NOT NULL,
@@ -18,9 +9,6 @@ release_date DATE
 );
 
 ALTER TABLE album ADD PRIMARY KEY(album_id);
-
-ALTER TABLE track
-ADD FOREIGN KEY (album_id) REFERENCES album(album_id);
 
 CREATE TABLE artist(
 artist_id INT,
